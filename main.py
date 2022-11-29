@@ -16,5 +16,6 @@ def hello_world():
 
     gtag('config', 'UA-250382412-1');
   </script>
+  <button type="button">Click Me!</button></html>
 """
-  return prefix_google + "Hello, world!"
+  return prefix_google
