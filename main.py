@@ -1,9 +1,9 @@
 from flask import Flask
-
+import logging
 app=Flask(__name__)
-@app.route('/',methods=["GET"])
+@app.route('/')
 
-
+# tp1 : adding cookies to our app
 def hello_world():
 
   prefix_google="""
@@ -19,3 +19,14 @@ def hello_world():
   <button type="button">Click Me!</button></html>
 """
   return prefix_google
+
+
+# tp2: log part
+@app.route('/loggs')
+def loggs():
+    app.logger.warning('testing warning log')
+    script="""
+    <script>console.log("loggy loggy where am I ?")</script>
+    """
+    return "Check your console "+ script
+
